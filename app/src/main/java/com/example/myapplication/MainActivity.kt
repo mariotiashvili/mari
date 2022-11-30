@@ -29,11 +29,11 @@ class MainActivity : AppCompatActivity() {
 
             }
 
-
         }
         registrationbutton.setOnClickListener {
             startActivity(Intent(this,MainActivity2::class.java))
         }
+
 
 
 
