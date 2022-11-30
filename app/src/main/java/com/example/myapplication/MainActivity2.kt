@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 
+
 class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,28 +20,34 @@ class MainActivity2 : AppCompatActivity() {
         val myprofilebutton = findViewById<TextView>(R.id.myprofilebutton)
 
         intent = Intent(this,MainActivity3::class.java)
+
+
         findViewById<TextView>(R.id.myprofilebutton).setOnClickListener {
             var name3 = name2.text.toString()
             var password4 = password2.text.toString()
             var password5 = password3.text.toString()
             var number1 = mynumber.text.toString()
-            if (name3 ==""){
-                Toast.makeText(this,"please,enter your name",Toast.LENGTH_LONG).show()
-            }
-            else if (password4 ==""){
-                Toast.makeText(this,"please,enter your password",Toast.LENGTH_LONG).show()
-            }
-            else if (password5 == ""){
-                Toast.makeText(this,"please,enter your password again",Toast.LENGTH_LONG).show()
+            if (name3 == "") {
+                Toast.makeText(this, "please,enter your name", Toast.LENGTH_LONG).show()
+            } else if (password4 == "") {
+                Toast.makeText(this, "please,enter your password", Toast.LENGTH_LONG).show()
+            } else if (password5 == "") {
+                Toast.makeText(this, "please,enter your password again", Toast.LENGTH_LONG).show()
 
-            }
-            else if (number1 ==""){
-                Toast.makeText(this,"please,enter your number",Toast.LENGTH_LONG).show()
-            }
-            else
-                startActivity(intent)
+            } else if (number1 == "") {
+                Toast.makeText(this, "please,enter your number", Toast.LENGTH_LONG).show()
+            } else
+                intent.putExtra("name"," mari")
+            intent.putExtra("number"," mari")
+            startActivity(intent)
+
+        }
+
+
+
 
         }
 
     }
-}
+
+
